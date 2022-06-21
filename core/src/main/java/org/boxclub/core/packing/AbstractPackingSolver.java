@@ -24,7 +24,7 @@ public abstract class AbstractPackingSolver implements PackingSolver {
                 .withMaxLoadWeight(bin.maxWeight())
                 .withEmptyWeight(bin.emptyWeight())
                 // Coordinate transform: in our system, y is up, in the lib, z is up
-                .withSize(bin.x(), -bin.z(), bin.y())
+                .withSize(bin.x(), bin.z(), bin.y())
                 .build());
         }
 
@@ -36,7 +36,7 @@ public abstract class AbstractPackingSolver implements PackingSolver {
             products.add(new StackableItem(Box.newBuilder()
                 .withId(item.id())
                 // Coordinate transform: in our system, y is up, in the lib, z is up
-                .withSize(item.x(), -item.z(), item.y())
+                .withSize(item.x(), item.z(), item.y())
                 .withWeight(1)
                 .withRotate3D()
                 .build(), item.count()));
@@ -66,8 +66,8 @@ public abstract class AbstractPackingSolver implements PackingSolver {
                 int xEnd = stackPlacement.getAbsoluteEndX();
                 int y = stackPlacement.getAbsoluteZ();
                 int yEnd = stackPlacement.getAbsoluteEndZ();
-                int z = -stackPlacement.getAbsoluteY();
-                int zEnd = -stackPlacement.getAbsoluteEndY();
+                int z = stackPlacement.getAbsoluteY();
+                int zEnd = stackPlacement.getAbsoluteEndY();
 
                 content.add(new Placement(item.get(), x, xEnd, y, yEnd, z, zEnd));
             }
