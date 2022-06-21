@@ -1,4 +1,4 @@
 package org.boxclub.core.datatypes;
 
-public record Item(int x, int y, int z, int count) {
+public record Item(String id, int x, int y, int z, int weight, int count) {
 }

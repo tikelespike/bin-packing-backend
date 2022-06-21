@@ -1,4 +1,8 @@
-org/boxclub/core/Bin.class
-org/boxclub/core/TestCore.class
-org/boxclub/core/PackingRequest.class
-org/boxclub/core/Item.class
+org/boxclub/core/datatypes/Placement.class
+org/boxclub/core/datatypes/Item.class
+org/boxclub/core/datatypes/PackingRequest.class
+org/boxclub/core/datatypes/Bin.class
+org/boxclub/core/datatypes/PackingResponse.class
+org/boxclub/core/datatypes/PackedBin.class
+org/boxclub/core/packing/PackingSolver.class
+org/boxclub/core/packing/BruteforceSolver.class

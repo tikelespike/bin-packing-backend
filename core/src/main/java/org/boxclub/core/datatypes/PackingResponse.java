@@ -1,4 +1,6 @@
 package org.boxclub.core.datatypes;
 
-public record PackingResponse() {
+import java.util.List;
+
+public record PackingResponse(boolean success, List<PackedBin> packedBins) {
 }

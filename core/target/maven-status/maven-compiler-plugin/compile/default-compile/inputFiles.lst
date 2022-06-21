@@ -1,4 +1,8 @@
-/home/timo/Documents/git-repos/hackathon/bin-packing-backend/core/src/main/java/org/boxclub/core/Item.java
-/home/timo/Documents/git-repos/hackathon/bin-packing-backend/core/src/main/java/org/boxclub/core/TestCore.java
-/home/timo/Documents/git-repos/hackathon/bin-packing-backend/core/src/main/java/org/boxclub/core/Bin.java
-/home/timo/Documents/git-repos/hackathon/bin-packing-backend/core/src/main/java/org/boxclub/core/PackingRequest.java
+/home/timo/Documents/git-repos/hackathon/bin-packing-backend/core/src/main/java/org/boxclub/core/datatypes/PackingResponse.java
+/home/timo/Documents/git-repos/hackathon/bin-packing-backend/core/src/main/java/org/boxclub/core/datatypes/Bin.java
+/home/timo/Documents/git-repos/hackathon/bin-packing-backend/core/src/main/java/org/boxclub/core/datatypes/PackingRequest.java
+/home/timo/Documents/git-repos/hackathon/bin-packing-backend/core/src/main/java/org/boxclub/core/datatypes/Placement.java
+/home/timo/Documents/git-repos/hackathon/bin-packing-backend/core/src/main/java/org/boxclub/core/packing/PackingSolver.java
+/home/timo/Documents/git-repos/hackathon/bin-packing-backend/core/src/main/java/org/boxclub/core/packing/BruteforceSolver.java
+/home/timo/Documents/git-repos/hackathon/bin-packing-backend/core/src/main/java/org/boxclub/core/datatypes/PackedBin.java
+/home/timo/Documents/git-repos/hackathon/bin-packing-backend/core/src/main/java/org/boxclub/core/datatypes/Item.java
