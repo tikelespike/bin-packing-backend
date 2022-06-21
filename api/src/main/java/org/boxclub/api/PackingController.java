@@ -7,11 +7,13 @@ import org.boxclub.core.packing.LargestAreaFitFirstSolver;
 import org.boxclub.core.packing.PackingSolver;
 import org.boxclub.core.sorting.DefaultPlacementComparator;
 import org.boxclub.core.sorting.SortingPackingDecorator;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 public class PackingController {
     private PackingSolver solver = new LargestAreaFitFirstSolver();
     private static final boolean USE_SORTING = true;
