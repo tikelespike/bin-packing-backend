@@ -1,1 +1,2 @@
-TestApi.class
+org/boxclub/api/ApiApplication.class
+org/boxclub/api/TestApi.class

@@ -1,1 +1,4 @@
-/home/timo/Documents/git-repos/hackathon/bin-packing-backend/core/src/main/java/TestCore.java
+/home/timo/Documents/git-repos/hackathon/bin-packing-backend/core/src/main/java/org/boxclub/core/Item.java
+/home/timo/Documents/git-repos/hackathon/bin-packing-backend/core/src/main/java/org/boxclub/core/PackageRequest.java
+/home/timo/Documents/git-repos/hackathon/bin-packing-backend/core/src/main/java/org/boxclub/core/TestCore.java
+/home/timo/Documents/git-repos/hackathon/bin-packing-backend/core/src/main/java/org/boxclub/core/Bin.java
