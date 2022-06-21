@@ -23,7 +23,8 @@ public abstract class AbstractPackingSolver implements PackingSolver {
                 .withId(bin.id())
                 .withMaxLoadWeight(bin.maxWeight())
                 .withEmptyWeight(bin.emptyWeight())
-                .withSize(bin.x(), bin.y(), bin.z())
+                // Coordinate transform: in our system, y is up, in the lib, z is up
+                .withSize(bin.x(), -bin.z(), bin.y())
                 .build());
         }
 
@@ -35,7 +36,8 @@ public abstract class AbstractPackingSolver implements PackingSolver {
         for (Item item : items) {
             products.add(new StackableItem(Box.newBuilder()
                 .withId(item.id())
-                .withSize(item.x(), item.y(), item.z())
+                // Coordinate transform: in our system, y is up, in the lib, z is up
+                .withSize(item.x(), -item.z(), item.y())
                 .withWeight(1)
                 .withRotate3D()
                 .build(), item.count()));
@@ -60,12 +62,13 @@ public abstract class AbstractPackingSolver implements PackingSolver {
                 // an item is lost - we could not package correctly
                 if (item.isEmpty()) return new PackingResponse(false, null);
 
+                // Coordinate transformation: in lib, z is up, in our system, y is up
                 int x = stackPlacement.getAbsoluteX();
                 int xEnd = stackPlacement.getAbsoluteEndX();
-                int y = stackPlacement.getAbsoluteY();
-                int yEnd = stackPlacement.getAbsoluteEndY();
-                int z = stackPlacement.getAbsoluteZ();
-                int zEnd = stackPlacement.getAbsoluteEndZ();
+                int y = stackPlacement.getAbsoluteZ();
+                int yEnd = stackPlacement.getAbsoluteEndZ();
+                int z = -stackPlacement.getAbsoluteY();
+                int zEnd = -stackPlacement.getAbsoluteEndY();
 
                 content.add(new Placement(item.get(), x, xEnd, y, yEnd, z, zEnd));
             }
