@@ -1,4 +1,4 @@
-package org.boxclub.core;
+package org.boxclub.core.datatypes;
 
 import java.util.List;
 

@@ -1,20 +1,17 @@
 package org.boxclub.api;
 
-import org.boxclub.core.Bin;
-import org.boxclub.core.Item;
-import org.boxclub.core.PackingRequest;
+import org.boxclub.core.datatypes.PackingRequest;
+import org.boxclub.core.datatypes.PackingResponse;
+import org.boxclub.core.packing.PackingSolver;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-
 @RestController
 public class PackingController {
+    private PackingSolver solver;
 
     @PutMapping("/pack")
-    public void pack(PackingRequest request) {
-        List<Bin> bins = request.bins();
-        int binLimit = request.binLimit();
-        List<Item> items = request.items();
+    public PackingResponse pack(PackingRequest request) {
+        return solver.pack(request);
     }
 }
