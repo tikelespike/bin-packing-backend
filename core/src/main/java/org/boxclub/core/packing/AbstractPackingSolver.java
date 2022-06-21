@@ -28,7 +28,6 @@ public abstract class AbstractPackingSolver implements PackingSolver {
                 .build());
         }
 
-        AbstractPackager packager = getPackager(containers);
 
         List<StackableItem> products = new ArrayList<>();
 
@@ -43,7 +42,7 @@ public abstract class AbstractPackingSolver implements PackingSolver {
                 .build(), item.count()));
         }
 
-        List<Container> match = packager.packList(products, request.binLimit());
+        List<Container> match = getPackager(containers).packList(products, request.binLimit());
         if (match == null) return new PackingResponse(false, null);
 
         List<PackedBin> packedBins = new ArrayList<>();
