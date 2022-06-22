@@ -63,11 +63,12 @@ public abstract class AbstractPackingSolver implements PackingSolver {
 
                 // Coordinate transformation: in lib, z is up, in our system, y is up
                 int x = stackPlacement.getAbsoluteX();
-                int xEnd = stackPlacement.getAbsoluteEndX();
+                // we want the end to be exclusive, not inclusive like in the lib
+                int xEnd = stackPlacement.getAbsoluteEndX() + 1;
                 int y = stackPlacement.getAbsoluteZ();
-                int yEnd = stackPlacement.getAbsoluteEndZ();
+                int yEnd = stackPlacement.getAbsoluteEndZ() + 1;
                 int z = stackPlacement.getAbsoluteY();
-                int zEnd = stackPlacement.getAbsoluteEndY();
+                int zEnd = stackPlacement.getAbsoluteEndY() + 1;
 
                 content.add(new Placement(item.get(), x, xEnd, y, yEnd, z, zEnd));
             }
